@@ -1,0 +1,42 @@
+---
+
+packages:
+  - curl
+  - unzip
+  - git
+  - apt-transport-https
+
+nginx_dependencies:
+  - cmake
+  - libxslt1-dev
+  - libpcre++-dev
+  - zlib1g-dev
+  - libxslt1-dev
+  - libgd2-noxpm-dev
+  - libgeoip-dev
+  - gnupg
+  - libperl-dev
+  - gcc
+  - perl
+  - ca-certificates
+  - libpcre++-dev
+  - zlib1g
+  - gettext
+  - libgcc1
+  - autoconf
+  - dpkg-dev
+  - g++
+  - libc6-dev
+  - make
+  - libpcre3-dev
+  - pkgconf
+  - re2c
+  - libpng-dev
+  - libjpeg62-turbo-dev
+  - libfreetype6-dev
+  - libicu-dev
+  - libmcrypt-dev
+  - libevent-dev
+  - libssl1.0-dev
+  - openssl
+
