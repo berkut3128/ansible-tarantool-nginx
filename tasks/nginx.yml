@@ -94,7 +94,10 @@
         owner=root
         group=root
 
-  notify:
-    - Restart nginx
+- name: Reload nginx
+  shell: nginx -s reload
+
+#  notify:
+#    - Restart nginx
 
 

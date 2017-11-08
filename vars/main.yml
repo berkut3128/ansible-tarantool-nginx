@@ -37,5 +37,6 @@ nginx_dependencies:
   - libmcrypt-dev
   - libevent-dev
   - libssl1.0.0
+  - libssl-dev
   - openssl
 
