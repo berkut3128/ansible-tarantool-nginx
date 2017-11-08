@@ -27,14 +27,12 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook -i tests/inventory tests/$DEP --syntax-check"
 
-  - "ansible-playbook -i tests/inventory tests/$DEP --connection=local --become"
-
-  # Run the role, checking to make sure it's idempotent.
+  # Run the role and checking.
   - >
     ansible-playbook -i tests/inventory tests/$DEP --connection=local --become
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+    | grep -q 'failed=0'
+    && (echo 'Installing and test: pass' && exit 0)
+    || (echo 'Installing and test: fail' && exit 1)
   # Make sure GitLab is running.
   - >
     curl -s -o /dev/null -w "%{http_code}" http://localhost
