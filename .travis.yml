@@ -27,7 +27,9 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook -i tests/inventory tests/$DEP --syntax-check"
 
-  # Run the role/playbook again, checking to make sure it's idempotent.
+  - "ansible-playbook -i tests/inventory tests/$DEP --connection=local --become"
+
+  # Run the role, checking to make sure it's idempotent.
   - >
     ansible-playbook -i tests/inventory tests/$DEP --connection=local --become
     | grep -q 'changed=0.*failed=0'
